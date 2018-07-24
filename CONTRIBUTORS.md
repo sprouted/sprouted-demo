@@ -1,2 +1,1 @@
-JR Palomar
-Tahmidul Alam
+JR Palomar, Tahmidul Alam
