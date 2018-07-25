@@ -26,3 +26,9 @@ Demo code using front-end and back-end languages for the SproutEd app.
   - Save the Chat
   - Save Your Mentor
   - Group Chats
+
+**Changelogs**
+    - WebsiteUpdate1
+        1. Added Start Page
+        2. Added Screen Two
+            - Refer to Wireframe
