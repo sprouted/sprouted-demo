@@ -8,17 +8,29 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#white">
     <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+<<<<<<< HEAD
     <title>PeakEd</title>
+=======
+    <title>SproutEd</title>
+>>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="dist/css/framework7.min.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="apple-touch-icon" href="img/f7-icon-square.png">
     <link rel="stylesheet" href="css/framework7.welcomescreen.css">
+<<<<<<< HEAD
+=======
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+>>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
   </head>
 
   <body>
     <div id="app" class="color-theme-gray">
+<<<<<<< HEAD
       <div class="statusbar" style="background-color:#171717;"></div>
+=======
+      <div class="statusbar" style="background-color: white;"></div>
+>>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
 
       <!-- Left panel with reveal effect-->
       <div class="panel panel-left panel-cover theme-dark">
@@ -31,9 +43,12 @@
                   <a href="/setting/" class="panel-close">Settings</a>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <a href="/decision/" class="panel-close">Decision</a>
                 </li>
                 <li>
+=======
+>>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
                   <a href="/profile/" class="panel-close">Profile</a>
                 </li>
                 <li>
@@ -45,6 +60,10 @@
 
               </ul>
               <div id="overlay-menu-picture" style="width:50%;" class="center">
+<<<<<<< HEAD
+=======
+                <img src="css/logo.png" width="40%" style="position:fixed; bottom:30px; left:18px; opacity: .4;" />
+>>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
               </div>
             </div>
 
@@ -56,20 +75,57 @@
 
       <div class="view view-main view-init ios-edges" data-url="/">
         <div class="page" data-page="index">
+<<<<<<< HEAD
           <div class="navbar">
             <div class="navbar-inner">
+=======
+          <div class="navbar" style: "background-color: #7B1FA2;">
+            <div class="navbar-inner" style: "background-color: #7B1FA2;">
+>>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
               <div class="left">
                 <a href="#" class="link icon-only panel-open" data-panel="left">
                 <i class="icon f7-icons ios-only">menu</i>
                 <i class="icon material-icons md-only">menu</i>
               </a>
               </div>
+<<<<<<< HEAD
               <div class="title sliding"></div>
 
+=======
+              <div class="title sliding">Exchange Knowledge.</div>
+              <div class="right">
+                <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                <i class="icon f7-icons ios-only">search_strong</i>
+                <i class="icon material-icons md-only">search</i>
+              </a>
+              </div>
+
+
+              <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-1">
+                <div class="searchbar-inner">
+                  <div class="searchbar-input-wrap">
+                    <input type="search" placeholder="Search events" />
+                    <i class="searchbar-icon"></i>
+                    <span class="input-clear-button"></span>
+                  </div>
+                  <span class="searchbar-disable-button">Cancel</span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="page-content">
+            <div id="eventsID"></div>
+            <div class="list simple-list searchbar-not-found">
+              <ul>
+                <li>Nothing found</li>
+              </ul>
+>>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
 
     <!--Login Page-->
@@ -115,6 +171,170 @@
       </div>
     </div>
     <!--End Login Page-->
+=======
+
+
+      <!--Login Page-->
+      <div class="login-screen">
+        <div class="page no-toolbar no-navbar no-swipeback app-login">
+          <div class="page-content login-screen-content">
+            <img src="css/logo.png" class="center" style="width: 80%;margin-top: 10px;margin-bottom: 80px;" />
+
+            <form class="animated fadeInUp">
+              <div class="list inset" style="padding: 0 20px; margin: auto; opacity: .5;">
+                <ul style="background-color: white;  border-radius: 5px;" class="center">
+                  <li class="item-content item-input">
+                    <div class="item-media"><i class="icon f7-icons size-18">lock_fill</i></div>
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="text" id="email" name="username" placeholder="Authorization Code" />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="list inset" style="padding: 20px 20px 0px 20px; margin: auto; opacity: 0.5;">
+                <ul style="background-color: white; border-radius: 5px;">
+                  <li class="item-content item-input">
+                    <div class="item-media"><i class="icon f7-icons size-18">compose_fill</i></div>
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="password" id="password" name="ID" placeholder="ID Code" />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="block inset">
+                <p><a href="#" id="quickstart-sign-in" style="margin: 0 5px;" onclick="toggleSignIn()" class="item-link button button-big color-black button-outline">Login</a></p>
+              </div>
+              <div style="text-align: center;">
+                <p><a class="center-white" style="color: black; margin: 5px;" onClick="alert('Please Contact Your School Administrator')" href="#">Forgot Info?</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--End Login Page-->
+
+      <!--Create Account Screen-->
+      <div class="popup create-account-screen">
+        <div class="page no-toolbar no-navbar no-swipeback">
+          <div class="page-content login-screen-content">
+            <img src="css/logo.png" class="center" style="width: 60%; margin-top: 50px" />
+            <div class="login-screen-title animated fadeInRight" style="color: white; font-weight: lighter; letter-spacing: 2px;">Create Account</div>
+            <form class="animated fadeInUp">
+              <div class="list inset" style="padding: 0 20px; margin: auto; opacity: .5;">
+                <ul style="background-color: white;  border-radius: 5px;" class="center">
+                  <li class="item-content item-input">
+                    <div class="item-media"><i class="icon f7-icons size-18">person</i></div>
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="text" id="new-name" placeholder="Name" />
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="list inset" style="padding: 20px 20px 0px 20px; margin: auto; opacity: .5;">
+                <ul style="background-color: white;  border-radius: 5px;" class="center">
+                  <li class="item-content item-input">
+                    <div class="item-media"><i class="icon f7-icons size-18">email</i></div>
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="text" id="new-email" placeholder="Email" />
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="list inset" style="padding: 20px 20px 0px 20px; margin: auto; opacity: 0.5;">
+                <ul style="background-color: white; border-radius: 5px;">
+                  <li class="item-content item-input">
+                    <div class="item-media"><i class="icon f7-icons size-18">lock</i></div>
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="password" id="new-password" placeholder="Password" />
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="list inset" style="padding: 20px 20px 0px 20px; margin: auto; opacity: 0.5;">
+                <ul style="background-color: white; border-radius: 5px;">
+                  <li class="item-content item-input">
+                    <div class="item-media"><i class="icon f7-icons size-18">lock</i></div>
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="password" id="confirm-password" placeholder="Confirm Password" />
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="block inset">
+                <p><a href="#" id="quickstart-sign-in" style="margin: 0 5px;" onclick="handleSignUp()" class="item-link button button-big color-black button-outline">Create Account</a></p>
+              </div>
+
+              <div class="list">
+                <div style="text-align: center;">
+                  <a href="#" style="color: white; margin: 5px;" class="link popup-close center-white">Cancel</a></p>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--End of Create Account Screen-->
+
+      <!--Authorization Screen-->
+      <div class="popup authorization-screen">
+        <div class="page no-navbar no-toolbar no-swipeback">
+          <div class="page-content login-screen-content layout-white">
+            <img src="css/logo.png" class="center" style="width: 60%; margin-top: 50px" />
+            <div class="login-screen-title animated fadeInRight" style="color: white; font-weight: lighter; letter-spacing: 2px;">Account Authorization</div>
+
+
+            <div class="block inset animated fadeInUp">
+              <div style="color: white; font-size: larger; margin: 10px;">
+                <p>Please check your email and verify your email address to continue.</p>
+              </div>
+
+              <p><a href="#" style="margin: 0 5px;" onclick="continueIndex();" class="item-link popup-close button button-big color-white">Continue</a></p>
+              <p><a href="#" style="margin: 0 5px;" onclick="sendEmailVerification()" class="item-link button button-big color-white">Resend Authorization Link</a></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      const toggle = document.querySelector('.toggle');
+      const body = document.querySelector('body');
+
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        body.classList.toggle('dark');
+      });
+    </script>
+
+
+
+    <!--End Auth Screen-->
+>>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
 
     <script src="js/firebase-app.js"></script>
     <script src="js/firebase-auth.js"></script>
@@ -137,7 +357,10 @@
     <script src="js/my-fb-clubs.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<<<<<<< HEAD
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+=======
+>>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
   </body>
 
 </html>
