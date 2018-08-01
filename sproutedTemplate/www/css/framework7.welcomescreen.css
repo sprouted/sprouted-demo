@@ -10,7 +10,7 @@
   font-size: 16px;
 }
 
-.welcomescreen-closebtn{
+.welcomescreen-closebtn {
   top: 5px;
   right: 5px;
   position: absolute;
@@ -22,66 +22,68 @@
 }
 
 .welcomescreen-swiper {
-  position:relative;
+  position: relative;
   width: 100%;
   height: 100%;
 }
 
-.welcomescreen-title{
+.welcomescreen-title {
   width: 100%;
   text-align: center;
   margin-top: 20%;
 }
 
-.welcomescreen-picture{
+.welcomescreen-picture {
   width: 100%;
   text-align: center;
   margin-top: 20%;
 }
 
 .welcomescreen-text {
-  position:absolute;
+  position: absolute;
   bottom: 65px;
   left: 0;
   right: 0;
   padding-left: 20px;
   padding-right: 20px;
-  text-align:center;
+  text-align: center;
 }
+
 .welcomescreen-content {
   padding: 15px;
 }
 
-.welcomescreen-container .swiper-pagination-bullet{
+.welcomescreen-container .swiper-pagination-bullet {
   background: rgba(255, 255, 255, 0.9) !important;
 }
 
-.welcomescreen-container .swiper-pagination-bullet-active{
+.welcomescreen-container .swiper-pagination-bullet-active {
   background: #fff;
 }
 
-.swiper-container-horizontal>.swiper-pagination{
+.swiper-container-horizontal>.swiper-pagination {
   bottom: 20px;
 }
 
-html.with-statusbar-overlay .welcomescreen-container{
-    top: 20px;
+html.with-statusbar-overlay .welcomescreen-container {
+  top: 20px;
 }
 
 /*
     Parallax Background Effect
 */
+
 .parallax-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 130%;
-    height: 100%;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
 
 .hide-title {
-    opacity: 0;
+  opacity: 0;
 }

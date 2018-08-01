@@ -18,11 +18,7 @@ function toggleSignIn() {
   // [START authwithemail]
   firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
     refreshEventPage();
-<<<<<<< HEAD
-    app.router.navigate('/decision/');
-=======
-    app.router.navigate('/');
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
+    app.router.navigate('/home/');
 
   }).catch(function(error) {
     // Handle Errors here.
@@ -109,11 +105,7 @@ function sendEmailVerification() {
     // Email Verification sent!
     // [START_EXCLUDE]
     console.log('Email Verification Sent!');
-<<<<<<< HEAD
     app.dialog.confirm('Email Authorication Sent', 'PeakEd Confirmed')
-=======
-    app.dialog.confirm('Email Authorication Sent', 'SproutEd Confirmed')
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
     // [END_EXCLUDE]
   });
   // [END sendemailverification]
@@ -161,7 +153,6 @@ function initApp() {
       app.user = user;
 
       firebase.database().ref("admins/" + app.user.uid).once("value", snapshot => {
-<<<<<<< HEAD
         var admin = snapshot.val();
         console.log(admin);
         if (admin == app.user.email) {
@@ -173,18 +164,6 @@ function initApp() {
         }
       })
       // }
-=======
-         var admin = snapshot.val();
-         console.log(admin);
-         if (admin == app.user.email){
-             console.log("user is admin!");
-             app.user.admin = true;
-           } else {
-             app.user.admin = false;
-           }
-         })
-       // }
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
       // });
 
       // var admin = ['QyZRt0iucVZOZGIp1ZdAGaLpI1p2', 'j57jeOfjm8WdkeNDM4hm5uHdojt2', '9wa5aLywAQWgAlvUD8v2ySENGYS2', 'uUIJbVNuNzWpc8pRmkH3e2wwQQU2', 'y0DDHJsN7pMYUZCoe76fOVV6erF3', 'M2t8x0eviMelteFA1ZZe3t92TQE2', 'ZXjYu5w3vJVCFK2tIpnQLGet1IV2'];
@@ -202,13 +181,8 @@ function initApp() {
       if (!app.user.emailVerified) {
         console.log("email not verified");
         authorizationScreen.open({
-<<<<<<< HEAD
           animate: true
         });
-=======
-            animate: true
-          });
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
       }
       else {
         console.log("email authorized");
@@ -291,7 +265,6 @@ function getNotifications() {
 
           // debugger;
           // when a notification is deleted it is no longer undefined
-<<<<<<< HEAD
           if (eventData.notifications[noteKey].datenow > dateMyEventAdded[i] & (typeof myEventInfo[i][noteKey] == 'undefined')) {
             eventData.notifications[noteKey].title = eventData.name;
             eventData.notifications[noteKey].myeventkey = myEventKeys[i];
@@ -319,41 +292,11 @@ function getNotifications() {
               if (typeof eventData.lastnote != 'undefined') {
                 notedate = Math.max(notedate, eventData.lastnote);
               }
-=======
-            if (eventData.notifications[noteKey].datenow > dateMyEventAdded[i] & (typeof myEventInfo[i][noteKey] == 'undefined')) {
-              eventData.notifications[noteKey].title = eventData.name;
-              eventData.notifications[noteKey].myeventkey = myEventKeys[i];
-              var datenow = eventData.notifications[noteKey].datenow;
-              eventData.notifications[noteKey].datenow = timeSince(datenow);
-
-              myNotifications.push(eventData.notifications[noteKey]);
-              myNoteKeys.push(noteKey);
-
-              if (!sessionStorage[noteKey]) {
-              // check that clubs doesn't already contain this club & this notificaiton not already screen
-              // prepares the pop up notification
-                if (!clubs.includes(eventData.club)) {
-                  if (clubnum > 0) {
-                    clubs += ', ';
-                  }
-                  clubs += eventData.club;
-                }
-                clubnum++;
-
-                // so that pop up doesn't continue the entire day
-                sessionStorage[noteKey] = true;
-                // isNote = true;
-                // debugger;
-                if (typeof eventData.lastnote != 'undefined') {
-                  notedate = Math.max(notedate, eventData.lastnote);
-                }
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
             }
           }
 
           // console.log("my note Keys" + myNoteKeys);
 
-<<<<<<< HEAD
           if (i == myEvents.length - 1) {
             // debugger;
             if (clubnum > 1) {
@@ -379,33 +322,6 @@ function getNotifications() {
           }
         }
       }
-=======
-            if (i == myEvents.length - 1) {
-              // debugger;
-              if (clubnum > 1) {
-                plural = 's';
-                a = '';
-              }
-
-              if (clubnum > 0){
-                  notification = {
-                  title: clubs,
-                  titleRightText: timeSince(notedate),
-                  subtitle: 'You have ' + a + ' new notification' + plural,
-                  text: 'Please check the notifications menu',
-                  closeButton: true,
-                };
-                var myNotification = app.notification.create(notification);
-                myNotification.open();
-                myNotification.on('click', function() {
-                  app.router.navigate('/mynotifications/')
-                  myNotification.close();
-                })
-              }
-            }
-          }
-        }
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
 
     })
   }
@@ -418,11 +334,7 @@ function getNotifications() {
 
 function setNotificationsCount() {
   var numberNotifications = app.user.notifications[0].length;
-<<<<<<< HEAD
   var numberSpan = (numberNotifications > 0) ? "<span class='badge color-red'>" + numberNotifications + "</span>" : "";
-=======
-  var numberSpan = (numberNotifications > 0) ? "<span class='badge color-red'>" + numberNotifications + "</span>": "";
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
   $$('#numberNotifications').html(numberSpan);
 }
 
@@ -464,11 +376,7 @@ function timeSince(date) {
       hours -= 12;
     }
     weekday = d.getDay();
-<<<<<<< HEAD
     if (weekday == new Date().getDay()) {
-=======
-    if (weekday == new Date().getDay()){
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
       weekday = "";
     }
     else {
@@ -476,15 +384,9 @@ function timeSince(date) {
     }
     var minutes = d.getMinutes();
     if (minutes < 10) {
-<<<<<<< HEAD
       minutes = "0" + minutes;
     }
     return weekday + hours + ':' + minutes + ampm;
-=======
-        minutes = "0" + minutes;
-    }
-    return weekday + hours+ ':' + minutes + ampm;
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
   }
   if (interval >= 1) {
     return interval + "h ago";
@@ -504,7 +406,6 @@ function timeSince(date) {
 // console.log(timeSince(new Date(Date.now()-aDay*2)));
 
 
-<<<<<<< HEAD
 // look through all events
 // eventsRef.on("value", function(snapshot) {
 //   var data = snapshot.val();
@@ -554,60 +455,6 @@ function timeSince(date) {
 // }
 
 // send notificaiton
-=======
-  // look through all events
-  // eventsRef.on("value", function(snapshot) {
-  //   var data = snapshot.val();
-  //   var elist = {};
-  //   var clubs;
-
-    // var notelist = [];
-    // debugger;
-    // for (var key in data) {
-      // debugger;
-      // add notificication if the user saved myevent before last notification created (datesaved <  last notedate)
-      // and the user had not already received the notification (notification does not exist)
-      // get all notifications tht happened after user's event added
-
-      // be sure to add "createdate" field to user events and "lastnotedate" to events
-
-      // if (app.user.events[0].includes(key) && data[key].lastnotedate > app.user.events[2][index for my event]) {
-      //   if (typeof data[key].notification != 'undefined') {
-          // var index = app.user.events[0].indexOf(key);
-          // notelist.push({
-          //   title: data[key].club,
-          //   titleRightText: data[key].notification.datenow,
-          //   subtitle: data[key].name,
-          //   text: data[key].notification.message,
-          //   closeButton: true,
-          // });
-          // if clubs.length > 0 {
-          //   clubs += ', ';
-          //   plural = 's';
-          // }
-
-          // clubs += data[key].club;
-          // notedate = data[key].notification.datenow;
-
-
-
-
-        // if (!plural) {
-        //   var a = 'a';
-        // }
-
-    //     notification = {
-    //       title: clubs,
-    //       titleRightText: notedate,
-    //       subtitle: 'You have ' + a + 'notification' + plural,
-    //       text: 'Please check the notifications menu',
-    //       closeButton: true,
-    //     };
-    //   }
-    // }
-
-    // send notificaiton
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
 //   })
 // }
 
@@ -652,7 +499,6 @@ function timeSince(date) {
 
 function continueIndex() {
   loginScreen.open({
-<<<<<<< HEAD
     animate: true
   });
 }
@@ -664,19 +510,6 @@ function confirmOk() {
     loginScreen.open({
       animate: true
     });
-=======
-      animate: true
-    });
-}
-
-function confirmOk() {
-  app.dialog.confirm('Are you sure you want to log out?', 'SproutEd', function() {
-    firebase.auth().signOut();
-    // app.router.navigate('/login-screen/');
-    loginScreen.open({
-        animate: true
-      });
->>>>>>> 28a227e66d34c3b0ea28a7ed41f5cc0b73f4e758
   });
 }
 
