@@ -9,3 +9,15 @@ var config = {
   };
 var FbApp = firebase.initializeApp(config);
 var db = FbApp.database();
+<<<<<<< HEAD
+=======
+
+// var eventsRef = db.ref("events");
+// console.log("eventsRef: " + eventsRef);
+
+// var clubsRef = db.ref("clubs");
+// console.log("eventsRef: " + clubsRef);
+
+// var myEventsRef = db.ref("myevents");
+// console.log("myeventsRef: " + myEventsRef)
+>>>>>>> 2aeff712fcd77e2d3839a8afd87072fcdf415daa
