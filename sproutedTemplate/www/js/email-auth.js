@@ -6,19 +6,20 @@ function toggleSignIn() {
   var password = document.getElementById('password').value;
   if (email.length < 4) {
     alert('Please enter valid Information.');
-    clear();
     return;
   }
   if (password.length < 4) {
     alert('Please enter an ID');
-    clear();
     return;
   }
   // Sign in with email and pass.
   // [START authwithemail]
-  firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
-    refreshEventPage();
-    app.router.navigate('/home/');
+  firebase.auth()
+  .signInWithEmailAndPassword(email, password)
+    .then(function() {
+    console.log('signed in:app', app);
+    console.log('signed in:app.router', app.router);
+    app.router.navigate('home');
 
   }).catch(function(error) {
     // Handle Errors here.
@@ -514,12 +515,12 @@ function confirmOk() {
 }
 
 
-function clear() {
-  // $$('#email').val("");
-  $$('#password').val("");
-}
+// function clear() {
+//   // $$('#email').val("");
+//   $$('#password').val("");
+// }
 
-function clearCreatePW() {
-  $$('#confirm-password').val("");
-  $$('#new-password').val("");
-}
+// function clearCreatePW() {
+//   $$('#confirm-password').val("");
+//   $$('#new-password').val("");
+// }

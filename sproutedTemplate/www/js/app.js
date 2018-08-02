@@ -86,23 +86,23 @@ var loginScreen = app.loginScreen.create({
     }
 })
 
-var createAccountScreen = app.popup.create({
-    el: '.create-account-screen',
-    on: {
-        opened: function() {
-            console.log('Create Account Screen opened')
-        }
-    }
-})
+// var createAccountScreen = app.popup.create({
+//     el: '.create-account-screen',
+//     on: {
+//         opened: function() {
+//             console.log('Create Account Screen opened')
+//         }
+//     }
+// })
 
-var authorizationScreen = app.popup.create({
-    el: '.authorization-screen',
-    on: {
-        opened: function() {
-            console.log('Authorization Screen opened')
-        },
-        // closed: function() {
-        //   refreshEventPage();
-        // }
-    }
-})
+// var authorizationScreen = app.popup.create({
+//     el: '.authorization-screen',
+//     on: {
+//         opened: function() {
+//             console.log('Authorization Screen opened')
+//         },
+//         // closed: function() {
+//         //   refreshEventPage();
+//         // }
+//     }
+// })

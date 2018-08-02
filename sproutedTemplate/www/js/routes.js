@@ -11,7 +11,6 @@ var routes = [
   {
     path: '/profile/',
     url: './pages/profile.html',
-
   },
 
   {
@@ -71,13 +70,11 @@ var routes = [
   {
     path: '/chat/',
     url: './pages/chat.html',
-
   },
 
   {
     path: '/redirect/',
     url: './pages/decisions.html',
-
   },
 
   // Settings added by will
@@ -91,14 +88,12 @@ var routes = [
   {
     path: '/update-user/',
     url: './pages/update-user.html',
-
   },
 
   // Admin page - Added
   {
     path: '/admin/',
     url: './pages/admin.html',
-
   },
 
   // Climber - Added
@@ -110,9 +105,9 @@ var routes = [
 
   // Sherpa - Added
   {
-    path: '/sherpa/',
-    url: './pages/sherpa.html',
-    name: 'sherpa',
+    path: '/guide/',
+    url: './pages/guide.html',
+    name: 'guide',
   },
 
   // Results - Added
