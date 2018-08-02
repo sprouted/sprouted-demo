@@ -514,12 +514,12 @@ function confirmOk() {
 }
 
 
-function clear() {
-  // $$('#email').val("");
-  $$('#password').val("");
-}
+// function clear() {
+//   // $$('#email').val("");
+//   $$('#password').val("");
+// }
 
-function clearCreatePW() {
-  $$('#confirm-password').val("");
-  $$('#new-password').val("");
-}
+// function clearCreatePW() {
+//   $$('#confirm-password').val("");
+//   $$('#new-password').val("");
+// }
