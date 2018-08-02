@@ -17,9 +17,10 @@ function toggleSignIn() {
   firebase.auth()
   .signInWithEmailAndPassword(email, password)
     .then(function() {
-    console.log('signed in:app', app);
-    console.log('signed in:app.router', app.router);
-    app.router.navigate('home');
+   // console.log('signed in:app', app);
+    //console.log('signed in:app.router', app.router);
+    app.router.navigate('/home/');
+   
 
   }).catch(function(error) {
     // Handle Errors here.
@@ -33,7 +34,6 @@ function toggleSignIn() {
       alert(errorMessage);
     }
     console.log(error);
-    clear();
     // [END_EXCLUDE]
   });
   // [END authwithemail]
