@@ -459,3 +459,15 @@ function refreshUIByClub(clubList) {
   // app.statusbar.show()
   // app.statusbar.iosOverlaysWebView(true)
 };
+
+function refreshEventPage() {
+  if (typeof app.form.getFormData('settings-form') !== 'undefined' &&
+    typeof app.form.getFormData('settings-form')['view-by'] !== 'undefined' &&
+    app.form.getFormData('settings-form')['view-by'] === 'club') {
+      getEventsByClub()
+    } else {
+      getEventsByMonth();
+    }
+}
+
+refreshEventPage()
