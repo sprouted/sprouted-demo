@@ -16,13 +16,17 @@ function toggleSignIn() {
     alert('Please enter an ID');
     return;
   }
+
   // Sign in with email and pass.
   // [START authwithemail]
   firebase.auth()
     .signInWithEmailAndPassword(email, password)
     .then(function() {
-      console.log('signed in:app', app);
-      console.log('signed in:app.router', app.router);
+      // console.log('signed in:app', app);
+      // console.log('signed in:app.router', app.router);
+      loginScreen.close({
+        animate: true
+      });
       app.router.navigate('/home/');
     }).catch(function(error) {
       // Handle Errors here.
@@ -38,6 +42,7 @@ function toggleSignIn() {
       // [END_EXCLUDE]
     });
   // [END authwithemail]
+
 }
 
 var loginScreen = app.loginScreen.create({
@@ -51,6 +56,25 @@ var loginScreen = app.loginScreen.create({
   }
 })
 
+function continueIndex() {
+  loginScreen.open({
+    animate: true
+  });
+}
+
+function confirmOk() {
+  app.dialog.confirm('Are you sure you want to log out?', 'PeakEd', function() {
+    // firebase.auth().signOut();
+    // app.router.navigate('/login-screen/');
+    loginScreen.open({
+      animate: true
+    });
+  });
+}
+
+// Firebase stuff
+
+// Find User State Change
 firebase.auth().onAuthStateChanged(function(user) {
   if (!user) {
     // User is signed out.
@@ -63,19 +87,3 @@ firebase.auth().onAuthStateChanged(function(user) {
     // [END_EXCLUDE]
   }
 });
-
-function continueIndex() {
-  loginScreen.open({
-    animate: true
-  });
-}
-
-function confirmOk() {
-  app.dialog.confirm('Are you sure you want to log out?', 'PeakEd', function() {
-    firebase.auth().signOut();
-    // app.router.navigate('/login-screen/');
-    loginScreen.open({
-      animate: true
-    });
-  });
-}
