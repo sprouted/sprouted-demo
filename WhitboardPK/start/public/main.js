@@ -91,6 +91,7 @@
     drawLine(data.x0 * w, data.y0 * h, data.x1 * w, data.y1 * h, data.color);
   }
 
+  // make the canvas fill its parent
   function onResize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;

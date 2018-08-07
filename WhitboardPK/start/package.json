@@ -1,7 +1,7 @@
 {
   "name": "whiteboard",
   "version": "1.0.0",
-  "description": "PeakEd whiteboard",
+  "description": "A collaborative whiteboard using socket.io",
   "main": "index.js",
   "keywords": [
     "socket.io",
@@ -12,7 +12,7 @@
     "socket.io": "latest"
   },
   "scripts": {
-    "start": "node index"
+    "start": "node index.js"
   },
   "author": "PeakEd",
   "license": ""
