@@ -11,6 +11,11 @@ var routes = [
     path: '/profile/',
     url: './pages/profile.html',
   },
+  
+ {
+    path: '/mathquiz/',
+    url: './pages/mathquiz.html',
+  },
 
   {
     path: '/match/',
