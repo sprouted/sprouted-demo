@@ -1,58 +1,66 @@
+var PORT = 3030; 
 
-const express = require('express');
-const app = express();
-const http = require('http').Server(app);
-const io = require('socket.io')(http);
-const port = process.env.PORT || 3001;
-
+var express = require('express');
+var s_whiteboard = require("./s_whiteboard.js");
+var app = express();
 app.use(express.static(__dirname + '/public'));
+var server = require('http').Server(app);
+server.listen(PORT);
+var io = require('socket.io')(server);
+console.log("Webserver & socketserver running on port:"+PORT);
 
-//heroku features:enable http-session-affinity
-//to work with socket io
+app.get('/loadwhiteboard', function(req, res) {
+    var wid = req["query"]["wid"];
+    var ret = s_whiteboard.loadStoredData(wid);
+    res.send(ret);
+    res.end();
+});
 
-function onConnection(socket){
-  socket.on('drawing', function(data){
-    socket.broadcast.emit('drawing', data);
-    console.log(data);
-  });
-  
-  socket.on('rectangle', function(data){
-    socket.broadcast.emit('rectangle', data);
-    console.log(data);
-  });
-  
-  socket.on('linedraw', function(data){
-    socket.broadcast.emit('linedraw', data);
-    console.log(data);
-  });
-  
-   socket.on('circledraw', function(data){
-    socket.broadcast.emit('circledraw', data);
-    console.log(data);
-  });
-  
-  socket.on('ellipsedraw', function(data){
-    socket.broadcast.emit('ellipsedraw', data);
-    console.log(data);
-  });
-  
-  socket.on('textdraw', function(data){
-    socket.broadcast.emit('textdraw', data);
-    console.log(data);
-  });
-  
-  socket.on('copyCanvas', function(data){
-    socket.broadcast.emit('copyCanvas', data);
-    console.log(data);
-  });
-  
-  socket.on('Clearboard', function(data){
-    socket.broadcast.emit('Clearboard', data);
-    console.log(data);
-  });
- 
+
+var allUsers = {};
+io.on('connection', function(socket){
+
+    socket.on('disconnect', function () {
+        delete allUsers[socket.id];
+        socket.broadcast.emit('refreshUserBadges', null);
+    });
+
+    socket.on('drawToWhiteboard', function(content) {
+        content = escapeAllContentStrings(content);
+        sendToAllUsersOfWhiteboard(content["wid"], socket.id, content)
+        s_whiteboard.handleEventsAndData(content); //save whiteboardchanges on the server
+    });
+
+    socket.on('joinWhiteboard', function(wid) {
+        allUsers[socket.id] = {
+            "socket" : socket,
+            "wid" : wid
+        };
+    });
+});
+
+function sendToAllUsersOfWhiteboard(wid, ownSocketId, content) {
+    for(var i in allUsers) {
+        if(allUsers[i]["wid"]===wid && allUsers[i]["socket"].id !== ownSocketId) {
+            allUsers[i]["socket"].emit('drawToWhiteboard', content);
+        }
+    }
 }
 
-io.on('connection', onConnection);
+//Prevent cross site scripting
+function escapeAllContentStrings(content, cnt) {
+    if(!cnt)
+        cnt = 0;
 
-http.listen(port, () => console.log('listening on port ' + port));
+    if(typeof(content)=="string") {
+        return content.replace(/<\/?[^>]+(>|$)/g, "");
+    }
+    for(var i in content) {
+        if(typeof(content[i])=="string") {
+            content[i] = content[i].replace(/<\/?[^>]+(>|$)/g, "");
+        } if(typeof(content[i])=="object" && cnt < 10) {
+            content[i] = escapeAllContentStrings(content[i], ++cnt);
+        }
+    }
+    return content;
+}
