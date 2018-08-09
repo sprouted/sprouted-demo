@@ -5,7 +5,7 @@ var routes = [
     url: './home.html',
     name: 'index',
   },
-
+  
   // Profile page - Added
   {
     path: '/profile/',
@@ -62,8 +62,8 @@ var routes = [
     url: './pages/sciencetri.html',
   },
   {
-    path: '/sstri/',
-    url: './pages/sstri.html',
+    path: '/mathquiz/',
+    url: './pages/mathquiz.html',
   },
 
   {
