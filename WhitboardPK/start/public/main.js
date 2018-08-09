@@ -37,8 +37,8 @@
     context.closePath();
 
     if (!emit) { return; }
-    var w = canvas.width;
-    var h = canvas.height;
+    var w = canvas.innerWidth;
+    var h = canvas.innerHeight;
 
     socket.emit('drawing', {
       x0: x0 / w,
@@ -86,10 +86,8 @@
   }
 
   function onDrawingEvent(data){
-    var w = canvas.width;
-    var h = canvas.height;
-    drawLine(data.x0 * w, data.y0 * h, data.x1 * w, data.y1 * h, data.color);
-  }
+    var w = canvas.innerWidth;
+    var h = canvas.innerHeight;
 
   // make the canvas fill its parent
   function onResize() {
