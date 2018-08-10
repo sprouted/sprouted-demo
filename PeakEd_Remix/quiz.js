@@ -59,4 +59,3 @@ var questions = [
 
 var quiz = new Quiz(questions);
 
-populate();

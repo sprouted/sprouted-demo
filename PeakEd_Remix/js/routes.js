@@ -15,6 +15,18 @@ var routes = [
  {
     path: '/mathquiz/',
     url: './pages/mathquiz.html',
+   on : {
+     
+     
+     pageAfterIn: function (event, page) {
+          // do something after page gets into the view
+       window.populate();
+       
+        },
+     
+     
+     
+   }
   },
 
   {
