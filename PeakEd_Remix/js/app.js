@@ -59,3 +59,4 @@ var app = new Framework7({
     tapHoldDelay: 750
   }
 });
+

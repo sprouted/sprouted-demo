@@ -11,6 +11,11 @@ var routes = [
     path: '/profile/',
     url: './pages/profile.html',
   },
+  
+    {
+    path: '/skills/',
+    url: './pages/skills.html',
+  },
 
  {
     path: '/mathquiz/',
@@ -18,7 +23,7 @@ var routes = [
    on : {
 
 
-     pageAfterIn: function (event, page) {
+     pageInit: function (event, page) {
           // do something after page gets into the view
        window.populate();
 
