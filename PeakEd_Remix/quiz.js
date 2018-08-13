@@ -38,7 +38,12 @@ function showScores() {
     gameOverHtml += "<h2 id='score'> Your score:  " + quiz.score + "</h2>" +
         "<br> <h2> The answers were: <ol> <li>5x<sup>2</sup> + x - 3</li> <li> 4 </li> <li>2%</li> </ol> </h2>";
     var element = document.getElementById("quiz");
-    $('left').hide();
+
+
+
+    $(window).on("load", function() {
+    $(".hi").hide();
+});
     element.innerHTML = gameOverHtml;
 
 }
