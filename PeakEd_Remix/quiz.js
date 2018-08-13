@@ -45,7 +45,7 @@ function showScores() {
 
 
 var questions = [
-  new Question ("What is the quotient when 10x<sup>3</sup> - 3x<sup>2</sup> - 7x + 3 is divided by 2x-1?",
+  new Question ("10x<sup>3</sup> - 3x<sup>2</sup> - 7x + 3 ÷ 2x-1 = ",
    ["5x<sup>2</sup> + x + 3", "5x<sup>2</sup> - x + 3","5x<sup>2</sup> - x - 3","5x<sup>2</sup> + x - 3"],
    "5x<sup>2</sup> + x - 3"),
 
@@ -58,4 +58,3 @@ var questions = [
 ];
 
 var quiz = new Quiz(questions);
-

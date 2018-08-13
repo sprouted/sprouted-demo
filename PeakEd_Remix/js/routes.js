@@ -5,27 +5,27 @@ var routes = [
     url: './home.html',
     name: 'index',
   },
-  
+
   // Profile page - Added
   {
     path: '/profile/',
     url: './pages/profile.html',
   },
-  
+
  {
     path: '/mathquiz/',
     url: './pages/mathquiz.html',
    on : {
-     
-     
+
+
      pageAfterIn: function (event, page) {
           // do something after page gets into the view
        window.populate();
-       
+
         },
-     
-     
-     
+
+
+
    }
   },
 
@@ -110,7 +110,7 @@ var routes = [
   // Sherpa - Added
   {
     path: '/guide/',
-    url: './pages/guide.html',
+    url: './pages/mathquiz.html',
     name: 'guide',
   },
 
