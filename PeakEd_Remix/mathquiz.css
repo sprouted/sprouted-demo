@@ -16,10 +16,6 @@ body {
     align-items: center;
 }
 
-.continue-match {
-  background-color: white;
-}
-
 #btn0, #btn1, #btn2, #btn3 {
     background-color: #154886;
     width: 250px;
