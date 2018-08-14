@@ -1,0 +1,21 @@
+{
+  "name": "sprouted-demo",
+  "version": "1.0.0",
+  "description": "Demo code using front-end and back-end languages for the SproutEd app.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sprouted/sprouted-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sprouted/sprouted-demo/issues"
+  },
+  "homepage": "https://github.com/sprouted/sprouted-demo#readme"
+}
