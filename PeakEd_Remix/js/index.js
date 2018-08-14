@@ -1,5 +1,16 @@
-function forgotInfo() {
+  function forgotInfo() {
   alert('Please Contact Your School Administrator');
+}
+
+function checkFirstVisit() {
+  if(document.cookie.indexOf('mycookie') == -1) {
+    document.cookie = 'mycookie=1';
+  } else {
+    // alert('You refreshed!');
+    loginScreen.open({
+      animate: true
+    });
+  }
 }
 
 /**
