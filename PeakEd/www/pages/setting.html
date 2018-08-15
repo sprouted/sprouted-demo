@@ -1,0 +1,33 @@
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back" onclick="refreshEventPage();">
+          <i class="icon icon-back md-only"></i>
+          <i class="f7-icons ios-only">chevron_left</i>
+          <span class="white">Back</span>
+        </a>
+      </div>
+      <div class="title">Settings</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="block-title">Main Settings</div>
+    <form class="list form-store-data" id="settings-form">
+      <ul>
+        <li>
+
+
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var switchC = document.getElementByClass("switch");
+  switchC.addEventListener("checked", function() {
+    document.body.style.backgroundColor = "black";
+  });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
