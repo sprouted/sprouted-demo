@@ -11,7 +11,7 @@ var routes = [
     path: '/profile/',
     url: './pages/profile.html',
   },
-  
+
     {
     path: '/skills/',
     url: './pages/skills.html',
@@ -91,6 +91,18 @@ var routes = [
   {
     path: '/chat/',
     url: './pages/chat.html',
+    on : {
+
+
+      pageInit: function (event, page) {
+           // do something after page gets into the view
+        starts();
+
+         },
+
+
+
+    }
   },
 
   {
@@ -138,7 +150,10 @@ var routes = [
     url: './pages/decision.html',
     name: 'decision',
   },
-
+  {
+    path: '/chat-screen/',
+    url: './pages/chat-screen.html',
+  },
   // Default route (404 page). MUST BE THE LAST
   {
     path: '(.*)',

@@ -1,3 +1,7 @@
+$('bronze-badge').hide();
+$('silver-badge').hide();
+$('gold-badge').hide();
+
 function populate() {
     if (quiz.isEnded()) {
         showScores();
@@ -39,6 +43,14 @@ function showScores() {
         "<br> <h2> The answers were: <ol> <li>5x<sup>2</sup> + x - 3</li> <li> 4 </li> <li>2%</li> </ol> </h2>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHtml;
+
+    if (quiz.score <= 1) {
+      $('bronze-badge').show();
+    } else if (quiz.score == 2) {
+      $('silver-badge').show()
+    } else {
+      $('gold-badge').show();
+    }
 }
 
 

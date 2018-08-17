@@ -551,7 +551,7 @@ code {
 /*Customized below here*/
 
 .login-screen-content {
-  background: url("https://ccasset.azureedge.net/3813/snow.gif");
+  background: white;
   color: black;
 }
 
@@ -827,13 +827,7 @@ a.button1:hover {
   font-weight: lighter;
   color: white;
 }
-.hoi span {
-  display: none;
-}
-.hoi::after {
-  animation: txt 5s infinite;
-  content: "";
-}
+
 
 @keyframes rt {
   100% {
@@ -855,14 +849,8 @@ a.button1:hover {
   }
 }
 @keyframes txt {
-  0% {
-    content: "LOADING.";
-  }
-  50% {
-    content: "LOADING..";
-  }
   100% {
-    content: "LOADING...";
+    content: "Click for chat...";
   }
 }
 
@@ -924,13 +912,11 @@ textarea {
 #video-background {
 /*  making the video fullscreen  */
   position: fixed;
-  right: 0; 
+  right: 0;
   bottom: 0;
-  min-width: 100%; 
+  min-width: 100%;
   min-height: 100%;
-  width: auto; 
+  width: auto;
   height: auto;
   z-index: -100;
 }
-
-
