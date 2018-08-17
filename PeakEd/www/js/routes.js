@@ -152,7 +152,7 @@ var routes = [
   },
   {
     path: '/chat-screen/',
-    url: './pages/chat-screen.html',
+    url: 'https://peaked-6daa2.firebaseapp.com/',
   },
   // Default route (404 page). MUST BE THE LAST
   {

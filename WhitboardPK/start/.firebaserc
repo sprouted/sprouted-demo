@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "peaked-6daa2"
+    "default": "peaked-6daa2",
+    "peaked": "sprouted-e9819"
   }
 }

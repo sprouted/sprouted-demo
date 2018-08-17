@@ -1,6 +1,6 @@
-$('bronze-badge').hide();
-$('silver-badge').hide();
-$('gold-badge').hide();
+// $('bronze-badge').hide();
+// $('silver-badge').hide();
+// $('gold-badge').hide();
 
 function populate() {
     if (quiz.isEnded()) {
@@ -44,13 +44,13 @@ function showScores() {
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHtml;
 
-    if (quiz.score <= 1) {
-      $('bronze-badge').show();
-    } else if (quiz.score == 2) {
-      $('silver-badge').show()
-    } else {
-      $('gold-badge').show();
-    }
+    // if (quiz.score <= 1) {
+    //   $('bronze-badge').show();
+    // } else if (quiz.score == 2) {
+    //   $('silver-badge').show()
+    // } else {
+    //   $('gold-badge').show();
+    // }
 }
 
 

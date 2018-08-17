@@ -106,7 +106,3 @@
       });
   }
   // Chat screen
-
-$(() => {
-  $('#id-go-to-chat').on('click', () => window.location.assign('https://peaked-6daa2.firebaseapp.com'))
-})

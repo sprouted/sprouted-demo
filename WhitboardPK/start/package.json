@@ -9,6 +9,7 @@
   ],
   "dependencies": {
     "express": "4.9.x",
+    "firebase": "^5.4.0",
     "socket.io": "latest"
   },
   "scripts": {
