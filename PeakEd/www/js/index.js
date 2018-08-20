@@ -106,3 +106,7 @@
       });
   }
   // Chat screen
+
+  function goChat() {
+      location.href = 'https://peaked-6daa2.firebaseapp.com/';
+  }
