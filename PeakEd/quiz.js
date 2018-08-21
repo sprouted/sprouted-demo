@@ -40,17 +40,10 @@ function showProgress() {
 function showScores() {
     var gameOverHtml = "<h1> Result </h1>";
     gameOverHtml += "<h2 id='score'> Your score:  " + quiz.score + "</h2>" +
-        "<br> <h2> The answers were: <ol> <li>5x<sup>2</sup> + x - 3</li> <li> 4 </li> <li>2%</li> </ol> </h2>";
+        "<br> <h2> The answers were: <ol> <li>5x<sup>2</sup> + x - 3</li> <li> 4 </li> <li>2%</li> </ol> </h2> <br> <img src='./css/GoldBadge.png' style='height:50%; width:50%;'/> <br> <h1>Gold Badge</h1>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHtml;
 
-    // if (quiz.score <= 1) {
-    //   $('bronze-badge').show();
-    // } else if (quiz.score == 2) {
-    //   $('silver-badge').show()
-    // } else {
-    //   $('gold-badge').show();
-    // }
 }
 
 

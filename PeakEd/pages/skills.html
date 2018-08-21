@@ -1,46 +1,48 @@
 <div class="page">
     <div style="overflow:scroll;" class="page-content">
         <img src="css/logo.png" class="center" style="width: 80%;margin-top: 0px;margin-bottom: 8px;" />
-        <form id="survey-form">
-            <h1 id="title">Subject Evaluation</h1>
-            <fieldset>
-                <legend id="gender">Strengths:</legend>
-                <p>
-                    <label for="male"><input type="checkbox" id="male" name="gender" value="male">English</label>
-                </p>
-                <p>
-                    <label for="female"><input type="checkbox" id="female1" name="gender" value="female">Math</label>
-                </p>
-                <p>
-                    <label for="female"><input type="checkbox" id="female2" name="gender" value="female">Science</label>
-                </p>
-                <p>
-                    <label for="female"><input type="checkbox" id="female3" name="gender" value="female">Social Studies</label>
-                </p>
-            </fieldset>
-            <p>
-                <label id="name-label" for="name"><span>Other:</span></label>
 
-                <div style="display:flex;">
-                    <input style="border: 4px solid black;" type="text" id="name" name="username" placeholder="Other Subjects..." required>
-
+        <div class="list">
+            <ul>
+                <li>
+                    <label class="item-checkbox item-content">
+                <input type="checkbox" name="demo-checkbox" value="english"/>
+                <i class="icon icon-checkbox"></i>
+                <div class="item-inner">
+                  <div class="item-title">English</div>
                 </div>
-            </p>
-            </section>
-            <section class="other">
-                <p>
-                    <label for="dropdown"><span>Whats Your Learning Style</span></label>
-                    <div style="display:flex;">
-                        <select style="border: 4px solid black; " id="dropdown" name="dropdown">
+              </label>
+                </li>
+                <li>
+                    <label class="item-checkbox item-content">
+                <input type="checkbox" name="demo-checkbox" value="math"/>
+                <i class="icon icon-checkbox"></i>
+                <div class="item-inner">
+                  <div class="item-title">Math</div>
+                </div>
+              </label>
+                </li>
+                <li>
+                    <label class="item-checkbox item-content">
+                <input type="checkbox" name="demo-checkbox" value="ss"/>
+                <i class="icon icon-checkbox"></i>
+                <div class="item-inner">
+                  <div class="item-title">Social Studies</div>
+                </div>
+              </label>
+                </li>
+                <li>
+                    <label class="item-checkbox item-content">
+                <input type="checkbox" name="demo-checkbox" value="science"/>
+                <i class="icon icon-checkbox"></i>
+                <div class="item-inner">
+                  <div class="item-title">Science</div>
+                </div>
+              </label>
+                </li>
+            </ul>
         </div>
-					<option value="pool">Visual</option>
-					<option value="lake">Reading and Writing</option>
-					<option value="sea">Kinesthetic</option>
-				</select>
-                </p>
-            </section>
-            <p>
-                <a href="/mathquiz/" class="button1" style="padding:10px !important; border:none !important;">Continue</a>
-        </form>
-        </div>
+
+        <a href="/mathquiz/" class="button1" style="padding:10px !important; border:none !important;">Continue</a>
     </div>
+</div>
